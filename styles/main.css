@@ -1,0 +1,11 @@
+.form { 
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form__content { 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
