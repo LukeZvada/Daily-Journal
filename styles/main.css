@@ -45,7 +45,6 @@ body {
 
 .form__content { 
     display: flex;
-    text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 4rem;
@@ -56,6 +55,10 @@ body {
 .form__style { 
     display: flex;
     justify-content: center;
+}
+
+.form__journalEntry { 
+    height: 4rem;
 }
 
 .bg {
