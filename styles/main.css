@@ -1,9 +1,22 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+
+body { 
+    margin: 0rem;
+}
+
+.header { 
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
 .siteTitle { 
     display: flex;
     justify-content: center;
-    margin-top: -6rem;
+    margin-top: -3rem;
     margin-bottom: 1rem;
+    letter-spacing: 15px;
 }
 
 .siteLogo { 
@@ -16,11 +29,80 @@
 .form { 
     display: flex;
     flex-direction: row;
-    margin-top: 1rem;
+    text-align: center;
+    margin-top: 7rem;
     margin-bottom: 1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    border-radius: 20px;
+    /* background-color: #5E747F; */
+    font-family: 'Raleway', sans-serif;
+}
+
+.form__background { 
+    background-color: rgb(228, 228, 228, 0.3);
 }
 
 .form__content { 
+    display: flex;
+    text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    font-family: 'Raleway', sans-serif;
 }
+
+.form__style { 
+    display: flex;
+    justify-content: center;
+}
+
+.bg {
+    /* The image used // url is pulling from where your image is stored */
+    background-image: url("../images/dailyjournal.jpg");
+  
+    /* vh = view height. min-height = the minimum amount the image will shrink when the window is made to be smaller. */
+    height: 100vh;
+    min-height: 500px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+  }
+
+  .button { 
+      display: flex;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 4.5rem;
+      margin-right: 4rem;
+      border-radius: 25px;
+      font-family: 'Raleway', sans-serif;
+  }
+
+  .button:hover { 
+        background-color: rgb(81, 81, 83);
+        color: white;
+  }
+
+
+  .mood__Selector { 
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 6.3rem;
+    margin-right: 4rem;
+    justify-content: center;
+  }
+
+    #entryLog { 
+        display: flex;
+        justify-content: center;
+        background-color: rgb(192, 191, 191);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    

@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header class="header">
+    <main id="container">
+    <header class="header bg">
         <img class="siteLogo" src="./images/DailyJournalImg.png"/>
         <h1 class="siteTitle">Daily Journal</h1> 
-    </header>
-    <main id="container">
-        <article>Journalist Name</article>
+    <!-- </header> -->
+    <!-- <main id="container"> -->
+        <!-- <article>/*Journalist Name*/</article> -->
         <section> 
+            <div class ="form__style">
             <form action=""> 
-                <fieldset class="form"> 
+                <fieldset class="form form__background"> 
                     <label for="journalDate">Date of Entry</label>
                     <input class="form__content" type="date" name="journalDate" id="journalDate">
                     <label for="conceptsCovered">Concepts Covered</label>
@@ -23,24 +25,28 @@
                     <label for="journalEntry">Journal Entry</label>
                     <input class="form__content" type="textarea" name="journalEntry" id="journalEntry">
                     <label for="mood">Mood</label>
-                    <select name="mood" id="mood">
+                    <select class="mood__Selector" name="mood" id="mood">
                         <option value="Happy">Happy</option>
                         <option value="Ok">Ok</option>
                         <option value="Sad">Sad</option>
                         <option value="Frustrated">Frustrated</option>
                     </select>
-                    <button class="form__content" type="button">Submit Journal Entry</button>
+                    <button class="button button:hover" type="button">Submit Journal Entry</button>
 
 
                 </fieldset>
 
 
             </form>
+        </div>
+    </header>
+ 
             <div id="entryLog"> </div>
+       
 
 
 
-        </section>
+   
 
 
 
