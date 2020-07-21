@@ -3,7 +3,7 @@
 
 
 body { 
-    margin: 0rem;
+    margin: 0;
 }
 
 .header { 
@@ -40,12 +40,11 @@ body {
 }
 
 .form__background { 
-    background-color: rgb(228, 228, 228, 0.3);
+    background-color: rgb(228, 228, 228, 0.4);
 }
 
 .form__content { 
     display: flex;
-    text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 4rem;
@@ -56,6 +55,10 @@ body {
 .form__style { 
     display: flex;
     justify-content: center;
+}
+
+.form__journalEntry { 
+    height: 4rem;
 }
 
 .bg {
