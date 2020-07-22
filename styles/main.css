@@ -92,20 +92,20 @@ body {
 }
 
 
-  .mood__Selector { 
+.mood__Selector { 
     display: flex;
     margin-top: 1rem;
     margin-bottom: 2rem;
     margin-left: 6.3rem;
     margin-right: 4rem;
     justify-content: center;
-  }
+}
 
-    #entryLog { 
-        display: flex;
-        justify-content: center;
-        background-color: rgb(192, 191, 191);
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
+#entryLog { 
+    display: flex;
+    justify-content: center;
+    background-color: rgb(192, 191, 191);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
     
