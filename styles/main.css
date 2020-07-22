@@ -99,6 +99,9 @@ body {
     margin-left: 6.3rem;
     margin-right: 4rem;
     justify-content: center;
+    border-radius: 6rem;
+    background-color: rgb(201, 201, 201);
+    opacity: 5;
 }
 
 #entryLog { 
@@ -108,4 +111,16 @@ body {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
     
