@@ -76,11 +76,11 @@ body {
     opacity: 0.9;
   }
 
-  .button { 
-      display: flex;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      margin-left: 4.5rem;
+.button { 
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 4.5rem;
       margin-right: 4rem;
       border-radius: 25px;
       font-family: 'Raleway', sans-serif;
