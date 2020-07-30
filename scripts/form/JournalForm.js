@@ -1,6 +1,6 @@
 
 
-
+const contentTarget = document.querySelector(".form__style")
 
 const render = () => {
     contentTarget.innerHTML =`
@@ -25,6 +25,6 @@ const render = () => {
     `
 }
 
-export JournalForm = () => { 
+export const JournalFormComponent = () => { 
     render()
 }
