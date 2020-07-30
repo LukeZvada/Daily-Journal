@@ -1,7 +1,7 @@
 import { saveEntry } from "../JournalEntries/JournalDataProvider.js";
 
 const contentTarget = document.querySelector(".form__style")
-const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector("#container")
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveEntry") {

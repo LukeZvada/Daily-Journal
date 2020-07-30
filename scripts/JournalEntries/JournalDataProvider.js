@@ -26,7 +26,7 @@ export const saveEntry = (note) => {
         body: jsonEntry
     })
     .then(getEntries)
-    .then(dispatchStateChangeEvent)
+    .then(dispatchChangeEvent)
 }
 
 
