@@ -1,19 +1,42 @@
-import { journalEntryComponent } from "./JournalHTMLMaker.js";
+
 import { getEntries, useJournalEntries } from "./JournalDataProvider.js";
+import { JournalFormComponent } from "../form/JournalForm.js";
 
-const entryLog = document.querySelector("#entryLog")
+const contentTarget = document.querySelector("#entryLog")
 
-export const entryListComponent = () => { 
-    const entries = useJournalEntries()
-
-    let entryHTMLRep = ""
-    for (const entry of entries) { 
-        entryHTMLRep += journalEntryComponent(entry)
+export const journalList = () => {
+    getEntries()
+        .then(() => {
+            const allEntries = useJournalEntries()
+                render(allEntries)
+        })
     }
 
-    entryLog.innerHTML += ` 
-    <article> 
-        ${entryHTMLRep}
-    </article>
-    `
-}
+    const render = (entryArr) => { 
+        const allEntryHTML = entryArr.map (
+            (currentNote) => {
+               return JournalFormComponent(currentNote)  
+            }
+        ).join("")
+    
+        contentTarget.innerHTML = allEntryHTML
+    }
+    
+
+
+
+
+// export const entryListComponent = () => { 
+//     const entries = useJournalEntries()
+
+//     let entryHTMLRep = ""
+//     for (const entry of entries) { 
+//         entryHTMLRep += journalEntryComponent(entry)
+//     }
+
+//     entryLog.innerHTML += ` 
+//     <article> 
+//         ${entryHTMLRep}
+//     </article>
+//     `
+// }

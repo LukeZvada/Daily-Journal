@@ -15,6 +15,19 @@ export const getEntries = () => {
 
 }
 
+export const saveEntry = (note) => {
+    const jsonEntry = JSON.stringify(note)
+
+    return fetch('http://localhost:3000/entries', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: jsonEntry
+    })
+    .then(getEntries)
+    .then(dispatchStateChangeEvent)
+}
 
 
 // export const useJournalEntries = () => {

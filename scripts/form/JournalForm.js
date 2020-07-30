@@ -1,6 +1,26 @@
-
+import { saveEntry } from "../JournalEntries/JournalDataProvider.js";
 
 const contentTarget = document.querySelector(".form__style")
+const eventHub = document.querySelector(".container")
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "saveEntry") {
+        
+        const journalDate = document.querySelector("#journalDate")
+        const conceptsCovered = document.querySelector("#conceptsCovered")
+        const journalEntry = document.querySelector("#journalEntry")
+        const journalMood = document.querySelector("#mood")
+
+        const newEntry = () => { 
+            date: journalDate.value 
+            conceptsCovered: conceptsCovered.value
+            entryText: journalEntry.value
+            mood: journalMood.value
+        }
+
+        saveEntry(newEntry)
+    }
+})
 
 const render = () => {
     contentTarget.innerHTML =`
