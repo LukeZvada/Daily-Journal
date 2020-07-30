@@ -1,8 +1,17 @@
 
 let entries = []
 
+const eventhub = document.querySelector("#container")
+
+
 export const useJournalEntries = () => { 
     return entries.slice()
+}
+
+const dispatchStateChangeEvent = () => { 
+    const entryStateChangeEvent = new CustomEvent("entryStateChanged")
+
+    eventhub.dispatchEvent(entryStateChangeEvent)
 }
 
 export const getEntries = () => {
@@ -15,8 +24,8 @@ export const getEntries = () => {
 
 }
 
-export const saveEntry = (note) => {
-    const jsonEntry = JSON.stringify(note)
+export const saveEntry = (entry) => {
+    const jsonEntry = JSON.stringify(entry)
 
     return fetch('http://localhost:3000/entries', {
         method: "POST",
@@ -26,7 +35,7 @@ export const saveEntry = (note) => {
         body: jsonEntry
     })
     .then(getEntries)
-    .then(dispatchChangeEvent)
+    .then(dispatchStateChangeEvent)
 }
 
 

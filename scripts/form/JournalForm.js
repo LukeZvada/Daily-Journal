@@ -11,13 +11,13 @@ eventHub.addEventListener("click", clickEvent => {
         const journalEntry = document.querySelector("#journalEntry")
         const journalMood = document.querySelector("#mood")
 
-        const newEntry = () => { 
-            date: journalDate.value 
-            conceptsCovered: conceptsCovered.value
-            entryText: journalEntry.value
+        const newEntry = { 
+            date: journalDate.value,
+            conceptsCovered: conceptsCovered.value,
+            entryText: journalEntry.value,
             mood: journalMood.value
         }
-
+        debugger
         saveEntry(newEntry)
     }
 })
@@ -39,7 +39,7 @@ const render = () => {
                 <option value="Sad">Sad</option>
                 <option value="Frustrated">Frustrated</option>
             </select>
-            <button class="button button:hover" type="button">Submit Journal Entry</button>
+            <button id="saveEntry" class="button button:hover" type="button">Submit Journal Entry</button>
         </fieldset>
     </form>
     `

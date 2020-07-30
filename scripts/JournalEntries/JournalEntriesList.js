@@ -4,6 +4,8 @@ import { JournalFormComponent } from "../form/JournalForm.js";
 
 const contentTarget = document.querySelector("#entryLog")
 
+
+
 export const journalList = () => {
     getEntries()
         .then(() => {
