@@ -10,7 +10,7 @@ export const getEntries = () => {
         .then(response => response.json())
         .then(parsedEntries => {
             entries = parsedEntries
-            console.log(parsedEntries)
+            // console.log(parsedEntries)
         })
 
 }
