@@ -1,5 +1,5 @@
 import { journalEntryComponent } from "./JournalHTMLMaker.js";
-import { useJournalEntries } from "./JournalDataProvider.js";
+import { getEntries, useJournalEntries } from "./JournalDataProvider.js";
 
 const entryLog = document.querySelector("#entryLog")
 

@@ -1,9 +1,15 @@
 
+let entries = []
+
+export const useJournalEntries = () => { 
+    return entries.slice()
+}
+
 export const getEntries = () => {
     fetch('http://localhost:3000/entries')
         .then(response => response.json())
         .then(parsedEntries => {
-            // entries = parsedEntries
+            entries = parsedEntries
             console.log(parsedEntries)
         })
 
