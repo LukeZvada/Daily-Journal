@@ -11,10 +11,10 @@ eventHub.addEventListener('showEntriesClicked', customEvent => {
 })
 
 const render = (entryArr) => { 
-    console.log("all entries: ", entryArr)
+    // console.log("all entries: ", entryArr)
     const allEntryHTML = entryArr.map (
         (currentNote) => {
-           return JournalEntryComponent(currentNote) 
+           return journalEntryComponent(currentNote) 
         }
     ).join("")
     console.log(allEntryHTML)
