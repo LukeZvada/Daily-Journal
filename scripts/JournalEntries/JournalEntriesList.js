@@ -3,8 +3,11 @@ import { getEntries, useJournalEntries } from "./JournalDataProvider.js";
 import { JournalFormComponent } from "../form/JournalForm.js";
 
 const contentTarget = document.querySelector("#entryLog")
+const eventHub = document.querySelector
 
-
+eventHub.addEventListener('showNotesClicked', customEvent => {
+    journalList()
+})
 
 export const journalList = () => {
     getEntries()

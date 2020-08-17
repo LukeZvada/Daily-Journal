@@ -17,7 +17,7 @@ eventHub.addEventListener("click", clickEvent => {
             entryText: journalEntry.value,
             mood: journalMood.value
         }
-        debugger
+      
         saveEntry(newEntry)
     }
 })
@@ -40,6 +40,7 @@ const render = () => {
                 <option value="Frustrated">Frustrated</option>
             </select>
             <button id="saveEntry" class="button button:hover" type="button">Submit Journal Entry</button>
+            <button id="
         </fieldset>
     </form>
     `
