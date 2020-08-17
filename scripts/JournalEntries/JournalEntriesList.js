@@ -32,7 +32,7 @@ export const journalList = () => {
     }
 
     eventHub.addEventListener("entryStateChanged", customEvent => {
-        const allDeletedEntries = useJournalEntries()
+        const allDeletedEntries = getEntries()
         render(allDeletedEntries)
     })
 
