@@ -1,4 +1,4 @@
-const contentTarget = document. querySelector(".form__style")
+const contentTarget = document. querySelector("#entryLog")
 const eventHub = document.querySelector("#container")
 
 eventHub.addEventListener("click", clickEvent => {
