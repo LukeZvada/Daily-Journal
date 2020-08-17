@@ -20,27 +20,6 @@
       "conceptsCovered": "Javascript Import/Export",
       "entryText": "We learned how to import separate js files into another to accomplish a goal that is set by functions",
       "mood": "Ok"
-    },
-    {
-      "date": "",
-      "conceptsCovered": "",
-      "entryText": "",
-      "mood": "Happy",
-      "id": 4
-    },
-    {
-      "date": "2020-08-06",
-      "conceptsCovered": "test",
-      "entryText": "test",
-      "mood": "Sad",
-      "id": 5
-    },
-    {
-      "date": "",
-      "conceptsCovered": "",
-      "entryText": "",
-      "mood": "Happy",
-      "id": 6
     }
   ]
 }
