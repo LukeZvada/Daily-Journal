@@ -18,7 +18,7 @@ const render = (entryArr) => {
         }
     ).join("")
     console.log(allEntryHTML)
-    contentTarget.innerHTML += allEntryHTML
+    contentTarget.innerHTML = allEntryHTML
 }
 
 export const journalList = () => {
@@ -32,7 +32,7 @@ export const journalList = () => {
     }
 
     eventHub.addEventListener("entryStateChanged", customEvent => {
-        const allDeletedEntries = getEntries()
-        render(allDeletedEntries)
+        const deletedEntries = useJournalEntries()
+        render(deletedEntries)
     })
 
