@@ -1,7 +1,6 @@
 
 import { getEntries, useJournalEntries } from "./JournalDataProvider.js";
 import { journalEntryComponent } from "./JournalHTMLMaker.js"
-import { JournalFormComponent } from "../form/JournalForm.js";
 
 const contentTarget = document.querySelector("#entryLog")
 const eventHub = document.querySelector("#container")
