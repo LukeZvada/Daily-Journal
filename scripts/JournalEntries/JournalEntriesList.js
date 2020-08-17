@@ -11,12 +11,13 @@ eventHub.addEventListener('showEntriesClicked', customEvent => {
 })
 
 const render = (entryArr) => { 
+    console.log("all entries: ", entryArr)
     const allEntryHTML = entryArr.map (
         (currentNote) => {
-           return journalEntryComponent(currentNote) 
+           return JournalEntryComponent(currentNote) 
         }
     ).join("")
-    
+    console.log(allEntryHTML)
     contentTarget.innerHTML = allEntryHTML
 }
 
@@ -30,3 +31,22 @@ export const journalList = () => {
         })
     }
 
+    
+
+
+
+
+// export const entryListComponent = () => { 
+//     const entries = useJournalEntries()
+
+//     let entryHTMLRep = ""
+//     for (const entry of entries) { 
+//         entryHTMLRep += journalEntryComponent(entry)
+//     }
+
+//     entryLog.innerHTML += ` 
+//     <article> 
+//         ${entryHTMLRep}
+//     </article>
+//     `
+// }
