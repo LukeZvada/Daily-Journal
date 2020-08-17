@@ -3,11 +3,21 @@ import { getEntries, useJournalEntries } from "./JournalDataProvider.js";
 import { JournalFormComponent } from "../form/JournalForm.js";
 
 const contentTarget = document.querySelector("#entryLog")
-const eventHub = document.querySelector
+const eventHub = document.querySelector("#container")
 
 eventHub.addEventListener('showNotesClicked', customEvent => {
     journalList()
 })
+
+const render = (entryArr) => { 
+    const allEntryHTML = entryArr.map (
+        (currentNote) => {
+           return JournalFormComponent(currentNote)  
+        }
+    ).join("")
+
+    contentTarget.innerHTML = allEntryHTML
+}
 
 export const journalList = () => {
     getEntries()
@@ -17,15 +27,6 @@ export const journalList = () => {
         })
     }
 
-    const render = (entryArr) => { 
-        const allEntryHTML = entryArr.map (
-            (currentNote) => {
-               return JournalFormComponent(currentNote)  
-            }
-        ).join("")
-    
-        contentTarget.innerHTML = allEntryHTML
-    }
     
 
 
