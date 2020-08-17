@@ -37,4 +37,12 @@ export const saveEntry = (entry) => {
     .then(dispatchStateChangeEvent)
 }
 
+export const deleteEntry = (entryId) => {
+    return fetch(`http://localhost:3000/entries/${ entryId }`, {
+        method: "DELETE"
+    })
+        .then(getEntries)
+        .then(dispatchStateChangeEvent)
+}
+
 
