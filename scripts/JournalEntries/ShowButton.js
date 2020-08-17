@@ -1,8 +1,9 @@
-const contentTarget = document. querySelector("#showEntryButton")
+const contentTarget = document.querySelector("#showEntryButton")
 const eventHub = document.querySelector("#container")
 
 eventHub.addEventListener("click", clickEvent => {
-    if(clickEvent.target.id === "showEntries") {
+    console.log("clicked the button")
+    if (clickEvent.target.id === "showEntries") {
         const customEvent = new CustomEvent("showEntriesClicked")
         eventHub.dispatchEvent(customEvent)
     }

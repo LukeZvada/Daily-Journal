@@ -1,29 +1,32 @@
 
 import { getEntries, useJournalEntries } from "./JournalDataProvider.js";
+import { journalEntryComponent } from "./JournalHTMLMaker.js"
 import { JournalFormComponent } from "../form/JournalForm.js";
 
 const contentTarget = document.querySelector("#entryLog")
 const eventHub = document.querySelector("#container")
 
-eventHub.addEventListener('showNotesClicked', customEvent => {
+eventHub.addEventListener('showEntriesClicked', customEvent => {
     journalList()
 })
 
 const render = (entryArr) => { 
     const allEntryHTML = entryArr.map (
         (currentNote) => {
-           return JournalFormComponent(currentNote)  
+           return journalEntryComponent(currentNote) 
         }
     ).join("")
-
+    
     contentTarget.innerHTML = allEntryHTML
 }
 
 export const journalList = () => {
     getEntries()
         .then(() => {
+            // console.log("gothere")
             const allEntries = useJournalEntries()
-                render(allEntries)
+            // console.log(allEntries)
+            render(allEntries)
         })
     }
 
