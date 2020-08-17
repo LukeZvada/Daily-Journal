@@ -1,4 +1,4 @@
-const contentTarget = document. querySelector("#entryLog")
+const contentTarget = document. querySelector("#showEntryButton")
 const eventHub = document.querySelector("#container")
 
 eventHub.addEventListener("click", clickEvent => {
