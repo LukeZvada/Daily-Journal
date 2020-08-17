@@ -18,7 +18,7 @@ const render = (entryArr) => {
         }
     ).join("")
     console.log(allEntryHTML)
-    contentTarget.innerHTML = allEntryHTML
+    contentTarget.innerHTML += allEntryHTML
 }
 
 export const journalList = () => {
