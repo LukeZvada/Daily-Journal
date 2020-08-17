@@ -1,8 +1,8 @@
 export const journalEntryComponent = (entry) => {
     return `
         <section id="entry--${entry.id}" class="journalEntry">
-            ${entry.entry} 
-            ${entry.date}
+            Entry: ${entry.entry} 
+            Date: ${entry.date}
         </section>
     `
 }
