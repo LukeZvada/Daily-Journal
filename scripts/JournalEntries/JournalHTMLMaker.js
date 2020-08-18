@@ -10,8 +10,6 @@ eventHub.addEventListener("click", clickEvent => {
     }
 })
 
-
-
 export const journalEntryComponent = (entry) => {
     return `
         <section id="entry--${entry.id}" class="journalEntry">
