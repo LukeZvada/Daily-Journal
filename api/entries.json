@@ -1,20 +1,3 @@
 {
-  "entries": [
-    {
-      "date": "2020-08-03",
-      "conceptsCovered": "test",
-      "entryText": "test",
-      "mood": "Happy",
-      "id": 1
-    }
-  ]
-}
-
-{
-  "moods": [
-    {
-      "id": 1,
-      "label": ""
-    }
-  ] 
+  "entries": []
 }
