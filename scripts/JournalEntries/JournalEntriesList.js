@@ -16,7 +16,7 @@ const render = (entryArr) => {
            return journalEntryComponent(currentNote) 
         }
     ).join("")
-    console.log(allEntryHTML)
+    // console.log(allEntryHTML)
     contentTarget.innerHTML = allEntryHTML
 }
 
