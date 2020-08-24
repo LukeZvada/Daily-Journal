@@ -1,3 +1,22 @@
 {
-  "entries": []
+  "entries": [], 
+  "moods": [
+    {
+      "id": 1,
+      "label": "Happy"
+    },
+    {
+      "id": 2,
+      "label": "Ok"
+    },
+    {
+      "id": 3,
+      "label": "Sad"
+    },
+    {
+      "id": 4,
+      "label": "Frustrated"
+    }
+  ]
+  
 }
