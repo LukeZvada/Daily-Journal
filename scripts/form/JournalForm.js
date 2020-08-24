@@ -28,7 +28,7 @@ const render = () => {
     
     getMoods()
         .then(() => {
-            const allMoods = useMood()
+            const mood = useMood()
     
     contentTarget.innerHTML =`
     <form action=""> 
@@ -42,7 +42,7 @@ const render = () => {
             <label for="mood">Mood</label>
             <select class="mood__Selector select-selected:after" name="mood" id="mood">
             ${
-             allMoods.map((moodObject) =>{
+             mood.map((moodObject) =>{
                  return `<option value ="mood--${moodObject.id}">${moodObject.label}</option>`
              }).join("")
             }
@@ -51,6 +51,7 @@ const render = () => {
         </fieldset>
     </form>
     `
+    console.log(allMoods)
 })
 }
 

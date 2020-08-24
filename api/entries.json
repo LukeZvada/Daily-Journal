@@ -1,34 +1,5 @@
 {
-  "entries": [
-    {
-      "date": "",
-      "conceptsCovered": "",
-      "entryText": "",
-      "mood": "Sad",
-      "id": 1
-    },
-    {
-      "date": "",
-      "conceptsCovered": "",
-      "entryText": "",
-      "mood": "Sad",
-      "id": 2
-    },
-    {
-      "date": "",
-      "conceptsCovered": "",
-      "entryText": "",
-      "mood": "Happy",
-      "id": 3
-    },
-    {
-      "date": "",
-      "conceptsCovered": "",
-      "entryText": "",
-      "moodId": "mood--1",
-      "id": 4
-    }
-  ],
+  "entries": [],
   "moods": [
     {
       "id": 1,

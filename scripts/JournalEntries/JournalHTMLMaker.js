@@ -16,7 +16,7 @@ export const journalEntryComponent = (entry, mood) => {
             Concepts Covered: ${entry.conceptsCovered}
             Entry: ${entry.entryText} 
             Date: ${entry.date}
-            Mood: ${entry.moodId.label}  
+             
             <button id="deleteEntry--${entry.id}">Delete</button> 
         </section>
     `
