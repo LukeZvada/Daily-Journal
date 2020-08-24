@@ -4,6 +4,7 @@ import { getMoods, useMood } from "../JournalEntries/MoodDataProvider.js";
 const contentTarget = document.querySelector(".form__style")
 const eventHub = document.querySelector("#container")
 
+
 eventHub.addEventListener("editNote", customEvent => {
     console.log("custom edit event happening")
     const allEntries = useJournalEntries()
@@ -23,7 +24,6 @@ eventHub.addEventListener("editNote", customEvent => {
     journalMood.value = entryObject.moodId
     id.value = entryId
 })
-
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveEntry") {

@@ -20,7 +20,7 @@ eventHub.addEventListener("click", clickEvent => {
             }
         })
         eventHub.dispatchEvent(customEvent)
-        console.log("got to here")
+        console.log("i got here")
     }
 })
 
