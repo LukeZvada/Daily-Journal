@@ -13,7 +13,7 @@ eventHub.addEventListener("click", clickEvent => {
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id.startsWith("editNote--")) { 
         const [prompt, entryId] = clickEvent.target.id.split("--")
-        const customEvent = new CustomEvent ("editNote", {
+        const customEvent = new CustomEvent("editNote", {
             detail: {
                 entryId: parseInt(entryId)
             }
