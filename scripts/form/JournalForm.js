@@ -38,7 +38,8 @@ eventHub.addEventListener("click", clickEvent => {
     if (journalDate.value !== "" && conceptsCovered.value !== "" && journalEntry.value !== "" && journalMood.value !== "0") {
         const editNoteId = document.querySelector("#entryId")
         
-        if(editNoteId === "") {
+        if(editNoteId.value === "") {
+            
             const newEntry = { 
                 date: journalDate.value,
                 conceptsCovered: conceptsCovered.value,
