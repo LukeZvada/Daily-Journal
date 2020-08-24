@@ -1,6 +1,5 @@
 import { saveEntry } from "../JournalEntries/JournalDataProvider.js";
 import { getMoods, useMood } from "../JournalEntries/MoodDataProvider.js";
-import { journalEntryComponent } from "../JournalEntries/JournalHTMLMaker.js";
 
 const contentTarget = document.querySelector(".form__style")
 const eventHub = document.querySelector("#container")
