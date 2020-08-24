@@ -33,34 +33,34 @@ eventHub.addEventListener("click", clickEvent => {
         const journalEntry = document.querySelector("#journalEntry")
         const journalMood = document.querySelector("#mood")
 
-    if (journalDate.value !== "" && conceptsCovered.value !== "" && journalEntry.value !== "" && journalMood.value !== "0") {
-        const editNoteId = document.querySelector("#entryId")
-        
-        if(editNoteId.value === "") {
+        if (journalDate.value !== "" && conceptsCovered.value !== "" && journalEntry.value !== "" && journalMood.value !== "0") {
+            const editNoteId = document.querySelector("#entryId")
             
-            const newEntry = { 
-                date: journalDate.value,
-                conceptsCovered: conceptsCovered.value,
-                entryText: journalEntry.value,
-                moodId: parseInt(journalMood.value)
+            if(editNoteId.value === "") {
+                
+                const newEntry = { 
+                    date: journalDate.value,
+                    conceptsCovered: conceptsCovered.value,
+                    entryText: journalEntry.value,
+                    moodId: parseInt(journalMood.value)
+                }
+                saveEntry(newEntry)
+                render()
+            } else {
+                const editedEntry = {
+                    date: journalDate.value,
+                    conceptsCovered: conceptsCovered.value,
+                    entryText: journalEntry.value,
+                    moodId: parseInt(journalMood.value),
+                    id: parseInt(editNoteId.value)
+                }
+                editNote(editedEntry)
+                editNoteId.value = ""
             }
-            saveEntry(newEntry)
-            render()
         } else {
-        const editedEntry = {
-            date: journalDate.value,
-            conceptsCovered: conceptsCovered.value,
-            entryText: journalEntry.value,
-            moodId: parseInt(journalMood.value),
-            id: parseInt(editNoteId.value)
-        }
-        editNote(editedEntry)
-        editNoteId.value = ""
-        }
-     }   else {
-        window.alert("All fields required")
+            window.alert("All fields required")
         } 
-}
+    }
 })
 
 const render = () => {

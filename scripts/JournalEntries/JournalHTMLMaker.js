@@ -1,6 +1,6 @@
 import { deleteEntry } from "./JournalDataProvider.js";
 
-const eventHub = document.querySelector("#entryLog")
+const eventHub = document.querySelector("#container")
 
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id.startsWith("deleteEntry--")) { 
