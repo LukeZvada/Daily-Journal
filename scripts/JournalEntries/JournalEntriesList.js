@@ -22,6 +22,14 @@ const render = () => {
 
     let htmlRepresentative = ""
 
+        entries.map((entry) => { 
+            const foundMood = moods.find((moodObject) => {
+                return moodObject.Id === entry.Id
+            })
+            htmlRepresentative += journalEntryComponent(entry, foundMood)
+        }).join("")
+        contentTarget.innerHTML = htmlRepresentative
+}
     
 
 export const journalList = () => {
