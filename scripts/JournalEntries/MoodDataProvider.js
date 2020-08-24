@@ -8,7 +8,7 @@ export const getMoods = () => {
     return fetch('http://localhost:3000/entries')
         .then(response => response.json())
         .then(parsedMoods => {
-            entries = parsedMoods
+            mood = parsedMoods
         })
 
 }

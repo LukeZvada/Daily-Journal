@@ -1,4 +1,5 @@
 import { saveEntry } from "../JournalEntries/JournalDataProvider.js";
+import { getMoods, useMood } from "../JournalEntries/MoodDataProvider.js";
 
 const contentTarget = document.querySelector(".form__style")
 const eventHub = document.querySelector("#container")
@@ -26,7 +27,7 @@ const render = () => {
     
     getMoods()
         .then(() => {
-            const allMoods = useMoods()
+            const allMoods = useMood()
     
     contentTarget.innerHTML =`
     <form action=""> 
