@@ -35,26 +35,33 @@ eventHub.addEventListener("click", clickEvent => {
         const journalEntry = document.querySelector("#journalEntry")
         const journalMood = document.querySelector("#mood")
 
-        const newEntry = { 
-            date: journalDate.value,
-            conceptsCovered: conceptsCovered.value,
-            entryText: journalEntry.value,
-            moodId: parseInt(journalMood.value)
-        }
-      
-        saveEntry(newEntry)
-    } else {
+    if (journalDate.value !== "" && conceptsCovered.value !== "" && journalEntry.value !== "" && journalMood.value !== "0") {
+        const editNoteId = document.querySelector("#entryId")
+        
+        if(editNoteId === "") {
+            const newEntry = { 
+                date: journalDate.value,
+                conceptsCovered: conceptsCovered.value,
+                entryText: journalEntry.value,
+                moodId: parseInt(journalMood.value)
+            }
+            saveEntry(newEntry)
+            render()
+        } else {
         const editedEntry = {
             date: journalDate.value,
             conceptsCovered: conceptsCovered.value,
             entryText: journalEntry.value,
-            moodId: parseInt(journalMood.value)
+            moodId: parseInt(journalMood.value),
             id: parseInt(editNoteId.value)
         }
-        editNote(EditedNote)
+        editNote(editedEntry)
         editNoteId.value = ""
-    
-    }
+        }
+     }   else {
+        window.alert("All fields required")
+        } 
+}
 })
 
 const render = () => {
@@ -81,6 +88,7 @@ const render = () => {
             }
             </select>
             <button id="saveEntry" class="button button:hover" type="button">Submit Journal Entry</button>
+            <input type="hidden" id="entryId" name="entryId" value="">
         </fieldset>
     </form>
     `
