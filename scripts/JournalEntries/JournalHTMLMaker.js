@@ -13,10 +13,10 @@ eventHub.addEventListener("click", clickEvent => {
 export const journalEntryComponent = (entry, mood) => {
     return `
         <section id="entry--${entry.id}" class="journalEntry">
-            Concepts Covered: ${entry.conceptsCovered}
-            Entry: ${entry.entryText} 
-            Date: ${entry.date}
-            Mood: ${mood.label}  
+            Concepts Covered: ${entry.conceptsCovered} <br />
+            Entry: ${entry.entryText} <br />
+            Date: ${entry.date} <br />
+            Mood: ${mood.label}  <br />
             <button id="deleteEntry--${entry.id}">Delete</button> 
         </section>
     `
