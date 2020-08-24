@@ -7,7 +7,6 @@ import "./JournalEntries/JournalEntriesList.js"
 
 
 
-// entryListComponent()
 getEntries()
 JournalFormComponent()
 showEntriesButton()
