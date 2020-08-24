@@ -4,8 +4,8 @@ import { getMoods, useMood } from "../JournalEntries/MoodDataProvider.js";
 const contentTarget = document.querySelector(".form__style")
 const eventHub = document.querySelector("#container")
 
-
 eventHub.addEventListener("editNote", customEvent => {
+    console.log("custom edit event happening")
     const allEntries = useJournalEntries()
     const entryId = event.detail.entryId
     const entryObject = allEntries.find(entry => entry.id === entryId)
@@ -17,14 +17,12 @@ eventHub.addEventListener("editNote", customEvent => {
     const journalMood = document.querySelector("#mood")
     const id = document.querySelector("#entryId")
         
-    journalDate.value = entryObject.title
-    conceptsCovered.value = entryObject.author
-    journalEntry.value = entryObject.content
-    journalMood.value = entryObject.criminalId
+    journalDate.value = entryObject.date
+    conceptsCovered.value = entryObject.conceptsCovered
+    journalEntry.value = entryObject.entryText
+    journalMood.value = entryObject.moodId
     id.value = entryId
 })
-
-
 
 
 eventHub.addEventListener("click", clickEvent => {

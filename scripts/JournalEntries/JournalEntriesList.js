@@ -38,6 +38,6 @@ export const journalList = () => {
     getEntries()
         .then(getMoods)
         .then(render)
-    }
+}
 
 
