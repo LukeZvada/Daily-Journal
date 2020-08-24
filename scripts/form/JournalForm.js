@@ -11,16 +11,16 @@ eventHub.addEventListener("editNote", customEvent => {
     const entryObject = allEntries.find(entry => entry.id === entryId)
     console.log(entryId)
     
-    const journalDate = document.querySelector("#note--title")
-    const conceptsCovered = document.querySelector("#note--author")
-    const journalEntry = document.querySelector("#note--content")
-    const journalMood = document.querySelector("#criminalSelect")
-    // const id = document.querySelector("#entryId")
+    const journalDate = document.querySelector("#journalDate")
+    const conceptsCovered = document.querySelector("#conceptsCovered")
+    const journalEntry = document.querySelector("#journalEntry")
+    const journalMood = document.querySelector("#mood")
+    const id = document.querySelector("#entryId")
         
-    noteTitle.value = entryObject.title
-    noteAuthor.value = entryObject.author
-    noteContent.value = entryObject.content
-    noteCriminal.value = entryObject.criminalId
+    journalDate.value = entryObject.title
+    conceptsCovered.value = entryObject.author
+    journalEntry.value = entryObject.content
+    journalMood.value = entryObject.criminalId
     id.value = entryId
 })
 
