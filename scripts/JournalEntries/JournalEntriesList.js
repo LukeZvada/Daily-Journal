@@ -15,22 +15,18 @@ eventHub.addEventListener("entryStateChanged", customEvent => {
 })
 
 const render = (entryArr) => { 
-    // console.log("all entries: ", entryArr)
     const allEntryHTML = entryArr.map (
         (currentNote) => {
            return journalEntryComponent(currentNote) 
         }
     ).join("")
-    // console.log(allEntryHTML)
     contentTarget.innerHTML = allEntryHTML
 }
 
 export const journalList = () => {
     getEntries()
         .then(() => {
-            // console.log("gothere")
             const allEntries = useJournalEntries()
-            // console.log(allEntries)
             render(allEntries)
         })
     }
