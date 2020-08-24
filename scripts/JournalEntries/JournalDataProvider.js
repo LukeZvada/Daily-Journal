@@ -45,4 +45,15 @@ export const deleteEntry = (entryId) => {
         .then(dispatchStateChangeEvent)
 }
 
+export const editNote = (entry) => {
+    return fetch(`http://localhost:8088/entries/${ entry.id }`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(entry)
+    })
+        .then(getEntries)
+        .then(dispatchStateChangeEvent)
+}
 
