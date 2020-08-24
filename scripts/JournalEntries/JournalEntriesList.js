@@ -24,10 +24,11 @@ const render = () => {
 
         entries.map((entry) => { 
             const foundMood = moods.find((moodObject) => {
-                return moodObject.Id === entry.Id
+                return moodObject.Id === entry.moodId
             })
             htmlRepresentative += journalEntryComponent(entry, foundMood)
         }).join("")
+        
         contentTarget.innerHTML = htmlRepresentative
 }
     

@@ -16,8 +16,10 @@ export const journalEntryComponent = (entry, mood) => {
             Concepts Covered: ${entry.conceptsCovered}
             Entry: ${entry.entryText} 
             Date: ${entry.date}
-            Mood: ${mood.label}  
+            Mood: ${entry.moodId.label}  
             <button id="deleteEntry--${entry.id}">Delete</button> 
         </section>
     `
 }
+
+// find a way to connect moodId to mood.Id
