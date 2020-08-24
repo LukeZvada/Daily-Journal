@@ -9,6 +9,11 @@ eventHub.addEventListener('showEntriesClicked', customEvent => {
     journalList()
 })
 
+eventHub.addEventListener("entryStateChanged", customEvent => {
+    const deletedEntries = useJournalEntries()
+    render(deletedEntries)
+})
+
 const render = (entryArr) => { 
     // console.log("all entries: ", entryArr)
     const allEntryHTML = entryArr.map (
@@ -30,8 +35,4 @@ export const journalList = () => {
         })
     }
 
-eventHub.addEventListener("entryStateChanged", customEvent => {
-    const deletedEntries = useJournalEntries()
-    render(deletedEntries)
-})
 
