@@ -1,4 +1,4 @@
-import { saveEntry } from "../JournalEntries/JournalDataProvider.js";
+import { saveEntry, editNote, useJournalEntries } from "../JournalEntries/JournalDataProvider.js";
 import { getMoods, useMood } from "../JournalEntries/MoodDataProvider.js";
 
 const contentTarget = document.querySelector(".form__style")
