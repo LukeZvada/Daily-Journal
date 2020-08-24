@@ -22,4 +22,3 @@ export const journalEntryComponent = (entry, mood) => {
     `
 }
 
-// find a way to connect moodId to mood.Id
