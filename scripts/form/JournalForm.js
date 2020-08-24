@@ -43,6 +43,17 @@ eventHub.addEventListener("click", clickEvent => {
         }
       
         saveEntry(newEntry)
+    } else {
+        const editedEntry = {
+            date: journalDate.value,
+            conceptsCovered: conceptsCovered.value,
+            entryText: journalEntry.value,
+            moodId: parseInt(journalMood.value)
+            id: parseInt(editNoteId.value)
+        }
+        editNote(EditedNote)
+        editNoteId.value = ""
+    
     }
 })
 
