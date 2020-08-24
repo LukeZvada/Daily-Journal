@@ -1,6 +1,7 @@
 
 import { getEntries, useJournalEntries } from "./JournalDataProvider.js";
 import { journalEntryComponent } from "./JournalHTMLMaker.js"
+import { getMoods, useMood } from "./MoodDataProvider.js";
 
 const contentTarget = document.querySelector("#entryLog")
 const eventHub = document.querySelector("#container")
@@ -14,21 +15,19 @@ eventHub.addEventListener("entryStateChanged", customEvent => {
     render(deletedEntries)
 })
 
-const render = (entryArr) => { 
-    const allEntryHTML = entryArr.map (
-        (currentNote) => {
-           return journalEntryComponent(currentNote) 
-        }
-    ).join("")
-    contentTarget.innerHTML = allEntryHTML
-}
+const render = () => { 
+
+    const moods = useMood()
+    const entries = useJournalEntries()
+
+    let htmlRepresentative = ""
+
+    
 
 export const journalList = () => {
     getEntries()
-        .then(() => {
-            const allEntries = useJournalEntries()
-            render(allEntries)
-        })
+        .then(getMoods)
+        .then(render)
     }
 
 
