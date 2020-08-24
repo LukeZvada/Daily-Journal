@@ -20,6 +20,13 @@
       "entryText": "",
       "mood": "Happy",
       "id": 3
+    },
+    {
+      "date": "",
+      "conceptsCovered": "",
+      "entryText": "",
+      "moodId": "mood--1",
+      "id": 4
     }
   ],
   "moods": [

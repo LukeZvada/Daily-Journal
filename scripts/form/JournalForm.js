@@ -1,5 +1,6 @@
 import { saveEntry } from "../JournalEntries/JournalDataProvider.js";
 import { getMoods, useMood } from "../JournalEntries/MoodDataProvider.js";
+import { journalEntryComponent } from "../JournalEntries/JournalHTMLMaker.js";
 
 const contentTarget = document.querySelector(".form__style")
 const eventHub = document.querySelector("#container")
@@ -16,7 +17,7 @@ eventHub.addEventListener("click", clickEvent => {
             date: journalDate.value,
             conceptsCovered: conceptsCovered.value,
             entryText: journalEntry.value,
-            moodId: parsedint(journalMood.value.split("--")[1])
+            moodId: journalMood.value
         }
       
         saveEntry(newEntry)
