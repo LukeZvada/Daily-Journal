@@ -51,7 +51,6 @@ const render = () => {
         </fieldset>
     </form>
     `
-    console.log(mood)
 })
 }
 
