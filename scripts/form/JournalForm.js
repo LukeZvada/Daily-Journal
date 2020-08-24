@@ -15,7 +15,7 @@ eventHub.addEventListener("click", clickEvent => {
             date: journalDate.value,
             conceptsCovered: conceptsCovered.value,
             entryText: journalEntry.value,
-            mood: journalMood.value
+            moodId: parsedint(journalMood.value.split("--")[1])
         }
       
         saveEntry(newEntry)
@@ -23,6 +23,11 @@ eventHub.addEventListener("click", clickEvent => {
 })
 
 const render = () => {
+    
+    getMoods()
+        .then(() => {
+            const allMoods = useMoods()
+    
     contentTarget.innerHTML =`
     <form action=""> 
             <fieldset class="form form__background"> 
@@ -34,15 +39,17 @@ const render = () => {
             <textarea placeholder="What did you learn?" class="form__content form__journalEntry" type="textarea" name="journalEntry" id="journalEntry"></textarea>
             <label for="mood">Mood</label>
             <select class="mood__Selector select-selected:after" name="mood" id="mood">
-                <option value="Happy">Happy</option>
-                <option value="Ok">Ok</option>
-                <option value="Sad">Sad</option>
-                <option value="Frustrated">Frustrated</option>
+            ${
+             allMoods.map((moodObject) =>{
+                 return `<option value ="mood--${moodObject.id}">${moodObject.label}</option>`
+             }).join("")
+            }
             </select>
             <button id="saveEntry" class="button button:hover" type="button">Submit Journal Entry</button>
         </fieldset>
     </form>
     `
+})
 }
 
 export const JournalFormComponent = () => { 
