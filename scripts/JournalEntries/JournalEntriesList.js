@@ -24,8 +24,9 @@ const render = () => {
 
         entries.map((entry) => { 
             const foundMood = moods.find((moodObject) => {
-                return moodObject.Id === entry.moodId
+                return moodObject.id === entry.moodId
             })
+            
             htmlRepresentative += journalEntryComponent(entry, foundMood)
         }).join("")
         

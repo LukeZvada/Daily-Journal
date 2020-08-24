@@ -17,7 +17,7 @@ eventHub.addEventListener("click", clickEvent => {
             date: journalDate.value,
             conceptsCovered: conceptsCovered.value,
             entryText: journalEntry.value,
-            moodId: journalMood.value
+            moodId: parseInt(journalMood.value)
         }
       
         saveEntry(newEntry)
@@ -43,7 +43,7 @@ const render = () => {
             <select class="mood__Selector select-selected:after" name="mood" id="mood">
             ${
              mood.map((moodObject) =>{
-                 return `<option value ="mood--${moodObject.id}">${moodObject.label}</option>`
+                 return `<option value ="${moodObject.id}">${moodObject.label}</option>`
              }).join("")
             }
             </select>
@@ -51,7 +51,7 @@ const render = () => {
         </fieldset>
     </form>
     `
-    console.log(allMoods)
+    console.log(mood)
 })
 }
 

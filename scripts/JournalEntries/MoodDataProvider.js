@@ -5,7 +5,7 @@ export const useMood = () => {
 }
 
 export const getMoods = () => {
-    return fetch('http://localhost:3000/entries')
+    return fetch('http://localhost:3000/moods')
         .then(response => response.json())
         .then(parsedMoods => {
             mood = parsedMoods
