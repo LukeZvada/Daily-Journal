@@ -56,9 +56,9 @@ eventHub.addEventListener("click", clickEvent => {
                 }
                 editNote(editedEntry)
                 editNoteId.value = ""
-            }
-        } else {
-            window.alert("All fields required")
+                }
+            } else {
+                window.alert("All fields required")
         } 
     }
 })
