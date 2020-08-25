@@ -4,7 +4,7 @@ import { getMoods, useMood } from "../JournalEntries/MoodDataProvider.js";
 const contentTarget = document.querySelector(".form__style")
 const eventHub = document.querySelector("#container")
 
-
+// declare the editNote custom event
 eventHub.addEventListener("editNote", customEvent => {
     console.log("custom edit event happening")
     const allEntries = useJournalEntries()

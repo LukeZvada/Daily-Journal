@@ -1,34 +1,5 @@
 {
-  "entries": [
-    {
-      "date": "",
-      "conceptsCovered": "",
-      "entryText": "",
-      "moodId": 1,
-      "id": 5
-    },
-    {
-      "date": "2020-07-27",
-      "conceptsCovered": "gdsg",
-      "entryText": "fgds",
-      "moodId": 1,
-      "id": 6
-    },
-    {
-      "date": "2020-08-12",
-      "conceptsCovered": "dsa",
-      "entryText": "sa",
-      "moodId": 1,
-      "id": 7
-    },
-    {
-      "date": "2020-08-25",
-      "conceptsCovered": "dsa",
-      "entryText": "sad",
-      "moodId": 3,
-      "id": 8
-    }
-  ],
+  "entries": [],
   "moods": [
     {
       "id": 1,

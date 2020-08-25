@@ -2,6 +2,7 @@ import { deleteEntry } from "./JournalDataProvider.js";
 
 const eventHub = document.querySelector("#container")
 
+// if user clicks delete note button, then call deleteNote method to delete the data via the API
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id.startsWith("deleteEntry--")) { 
         const [prefix, entryId] = clickEvent.target.id.split("--")
@@ -10,6 +11,7 @@ eventHub.addEventListener("click", clickEvent => {
     }
 })
 
+// if user clicks edit note button, then call the editNote custom event
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id.startsWith("editNote--")) {
         console.log("clicked edit note")
@@ -20,7 +22,6 @@ eventHub.addEventListener("click", clickEvent => {
             }
         })
         eventHub.dispatchEvent(customEvent)
-        console.log("i got here")
     }
 })
 
